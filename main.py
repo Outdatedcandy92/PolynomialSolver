@@ -18,7 +18,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 with st.form("entry_form",clear_on_submit=True):
-    expr = st.text_area("",placeholder="Enter A Polynomial")     
+    expr = st.text_area("",placeholder="Enter A Polynomial (Eg: 5x^2+2x-10)")     
     submitted = st.form_submit_button("Answer")
 
     if submitted:
