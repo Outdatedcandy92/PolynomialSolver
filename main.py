@@ -27,17 +27,19 @@ with st.form("entry_form",clear_on_submit=True):
             new= "1"+expr
             print(new)
             final_expr = new.replace('x', '*x' )
-            sol = solve(final_expr)
-            st.write(sol)
+            sol = list(solve(final_expr))
+            print(sol)
+            for i in sol:
+                st.write(f"x = {i}")
         
                  
 
 
         else:
             final_expr = expr.replace('x', '*x' )
-            sol = solve(final_expr)
-
-            st.write(sol)
+            sol = list(solve(final_expr))
+            print(sol)
+            for i in sol:
+                st.write(f"x = {i}")
             
             
-        print(sol)
