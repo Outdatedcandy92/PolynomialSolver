@@ -29,8 +29,12 @@ with st.form("entry_form",clear_on_submit=True):
             final_expr = new.replace('x', '*x' )
             sol = list(solve(final_expr))
             print(sol)
+            st.write("Zeros Of The Equation Are")
             for i in sol:
-                st.write(f"x = {i}")
+                sol = str(i)
+                final = sol.replace('sqrt', u"\u221A").replace('*', u"\u00D7")
+                
+                st.write(final)
         
                  
 
@@ -39,7 +43,13 @@ with st.form("entry_form",clear_on_submit=True):
             final_expr = expr.replace('x', '*x' )
             sol = list(solve(final_expr))
             print(sol)
+            st.write("Zeros Of The Equation Are")
             for i in sol:
-                st.write(f"x = {i}")
+                sol = str(i)
+                newsol = sol.replace('sqrt', u"\u221A")
+                final = sol.replace('sqrt', u"\u221A").replace('*', u"\u00D7")
+               
+                st.write(final)
+        
             
             
